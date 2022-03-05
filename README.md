@@ -1,5 +1,9 @@
 # my-first-nuxt-app
 
+書籍通りに構築したプロジェクト。
+昨今ではcreate-nuxt-appとかを使うのだと思う。
+別途作成するべし。これはTSじゃないし。
+
 > Nuxt.js project
 
 ## Build Setup
