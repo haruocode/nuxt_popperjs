@@ -1,25 +1,15 @@
 <template>
-  <section class="container">
-    <h1>{{greeting}}</h1>
-    <div>
-      <h3>Nuxt.jsのタグが付けられた投稿の一覧</h3>
-      <ul>
-        <li v-for="item in items" :key="item.id">
-          <h4>
-            <span>{{item.title}}</span>
-            <small>
-              <span>by </span>
-              <nuxt-link :to="`/users/${item.user.id}`">
-                {{item.user.id}}
-              </nuxt-link>
-            </small>
-          </h4>
-          <dir>{{item.body.slice(0, 130)}}......</dir>
-          <p><a :href="item.url">{{item.url}}</a></p>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <div>
+    <h2>Index page</h2>
+    <ul>
+      <li>
+        <nuxt-link to='/login'>ログインページへ</nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/authed-route">認証が必要なページへ</nuxt-link>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>

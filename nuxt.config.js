@@ -37,6 +37,11 @@ module.exports = {
     '~/plugins/axios.js'
   ],
   env: envSet,
+  router: {
+    middleware: [
+      'auth'
+    ]
+  },
   /*
   ** Build configuration
   */
