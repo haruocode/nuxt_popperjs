@@ -1,5 +1,6 @@
 <template>
   <section class="container">
+    <h1>{{greeting}}</h1>
     <div>
       <h3>Nuxt.jsのタグが付けられた投稿の一覧</h3>
       <ul>
@@ -25,11 +26,13 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  async asyncData({ store }) {
+  async asyncData({ store, app }) {
     if (store.getters['items'].length) {
       return
     }
     await store.dispatch('fetchItems')
+    const { greeting } = await app.$axios.$get('/api/')
+    return { greeting }
   },
   computed: {
     ...mapGetters(['items'])
