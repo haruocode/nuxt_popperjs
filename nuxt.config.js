@@ -7,6 +7,7 @@ module.exports = {
   */
   head: {
     title: 'my-first-nuxt-app',
+    titleTemplate: '%s | Qiita',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
