@@ -27,12 +27,12 @@ module.exports = {
   axios: {
     proxy: true
   },
-  proxy: {
-    '/api/': {
-      target: 'http://localhost:8888',
-      pathRewrite: {'^/api/': ''}
-    }
-  },
+  // proxy: {
+  //   '/api/': {
+  //     target: 'http://localhost:8888',
+  //     pathRewrite: {'^/api/': ''}
+  //   }
+  // },
   plugins: [
     '~/plugins/axios.js',
     '~/plugins/logger'
